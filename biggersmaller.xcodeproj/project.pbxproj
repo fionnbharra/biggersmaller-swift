@@ -13,6 +13,7 @@
 		E6556C1A1ACF2711006C690E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6556C191ACF2711006C690E /* Images.xcassets */; };
 		E6556C1D1ACF2711006C690E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6556C1B1ACF2711006C690E /* LaunchScreen.xib */; };
 		E6556C291ACF2711006C690E /* biggersmallerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C281ACF2711006C690E /* biggersmallerTests.swift */; };
+		E6556C331ACFCC9A006C690E /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C321ACFCC9A006C690E /* TransitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E6556C221ACF2711006C690E /* biggersmallerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = biggersmallerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6556C271ACF2711006C690E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6556C281ACF2711006C690E /* biggersmallerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = biggersmallerTests.swift; sourceTree = "<group>"; };
+		E6556C321ACFCC9A006C690E /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				E6556C121ACF2711006C690E /* AppDelegate.swift */,
 				E6556C141ACF2711006C690E /* ViewController.swift */,
+				E6556C321ACFCC9A006C690E /* TransitionManager.swift */,
 				E6556C161ACF2711006C690E /* Main.storyboard */,
 				E6556C191ACF2711006C690E /* Images.xcassets */,
 				E6556C1B1ACF2711006C690E /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6556C331ACFCC9A006C690E /* TransitionManager.swift in Sources */,
 				E6556C151ACF2711006C690E /* ViewController.swift in Sources */,
 				E6556C131ACF2711006C690E /* AppDelegate.swift in Sources */,
 			);

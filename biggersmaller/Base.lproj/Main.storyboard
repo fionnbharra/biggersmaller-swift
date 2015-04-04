@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="biggersmaller" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,10 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dj0-8M-4sW">
+                                <rect key="frame" x="16" y="545" width="568" height="30"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="to0-Uy-T8u" kind="custom" id="Nvp-Tm-shK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Dj0-8M-4sW" secondAttribute="centerX" id="WR2-qo-Qpg"/>
+                            <constraint firstItem="Dj0-8M-4sW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="guP-pF-c1U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dj0-8M-4sW" secondAttribute="bottom" constant="25" id="yQd-vk-QAG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zcB-vO-s13">
+            <objects>
+                <viewController id="to0-Uy-T8u" customClass="ViewController" customModule="biggersmaller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uON-eU-4bX"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Mb-bM-e8s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EgX-pa-0qw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQp-RC-Y8G">
+                                <rect key="frame" x="16" y="545" width="568" height="30"/>
+                                <state key="normal" title="Hide">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j0Y-t8-MJb" kind="unwind" unwindAction="unwindToViewController:" id="rN9-4a-lCX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="fQp-RC-Y8G" secondAttribute="centerX" id="2O5-iU-ea8"/>
+                            <constraint firstItem="2Mb-bM-e8s" firstAttribute="top" secondItem="fQp-RC-Y8G" secondAttribute="bottom" constant="25" id="adR-0U-YDB"/>
+                            <constraint firstItem="fQp-RC-Y8G" firstAttribute="trailing" secondItem="EgX-pa-0qw" secondAttribute="trailingMargin" id="f5W-GG-ryi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muy-EQ-tf6" sceneMemberID="firstResponder"/>
+                <exit id="j0Y-t8-MJb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
         </scene>
     </scenes>
