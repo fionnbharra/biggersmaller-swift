@@ -25,6 +25,8 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let offScreenRight = CGAffineTransformMakeTranslation(container.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.width, 0)
         
+        let foo = UIColor(red:0.5, green:1.38,blue:0.93,alpha:1.0)
+        transitionContext.containerView().backgroundColor = UIColor(rgba: "#3d9970")
         
         if(self.presenting){
             toView.transform = offScreenRight
@@ -84,5 +86,14 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.presenting = false
         return self
+    }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }

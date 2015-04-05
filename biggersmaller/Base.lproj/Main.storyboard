@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Dj0-8M-4sW" secondAttribute="centerX" id="WR2-qo-Qpg"/>
                             <constraint firstItem="Dj0-8M-4sW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="guP-pF-c1U"/>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.76078431369999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="fQp-RC-Y8G" secondAttribute="centerX" id="2O5-iU-ea8"/>
                             <constraint firstItem="2Mb-bM-e8s" firstAttribute="top" secondItem="fQp-RC-Y8G" secondAttribute="bottom" constant="25" id="adR-0U-YDB"/>
