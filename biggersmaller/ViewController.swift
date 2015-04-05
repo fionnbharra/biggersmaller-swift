@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     let transitionManager = TransitionManager()
+    let user = User.sharedInstance
     
     override func viewDidLoad() {
+        println("created view")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -37,5 +39,9 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func doButtonTap(sender: AnyObject) {
+        user.score++
+        println(user.score)
+    }
 }
 

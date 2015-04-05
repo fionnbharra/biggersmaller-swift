@@ -23,6 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="doButtonTap:" destination="BYZ-38-t0r" eventType="touchDown" id="EFU-Tr-f9F"/>
                                     <segue destination="to0-Uy-T8u" kind="custom" id="Nvp-Tm-shK"/>
                                 </connections>
                             </button>
@@ -57,6 +58,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="doButtonTap:" destination="to0-Uy-T8u" eventType="touchUpInside" id="khi-YJ-zOY"/>
                                     <segue destination="j0Y-t8-MJb" kind="unwind" unwindAction="unwindToViewController:" id="rN9-4a-lCX"/>
                                 </connections>
                             </button>
@@ -72,6 +74,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muy-EQ-tf6" sceneMemberID="firstResponder"/>
                 <exit id="j0Y-t8-MJb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="283" y="1074"/>
         </scene>
     </scenes>
 </document>
