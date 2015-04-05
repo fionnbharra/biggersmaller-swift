@@ -25,7 +25,6 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let offScreenRight = CGAffineTransformMakeTranslation(container.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.width, 0)
         
-        let foo = UIColor(red:0.5, green:1.38,blue:0.93,alpha:1.0)
         transitionContext.containerView().backgroundColor = UIColor(rgba: "#3d9970")
         
         if(self.presenting){
