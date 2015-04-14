@@ -16,6 +16,8 @@
 		E6556C331ACFCC9A006C690E /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C321ACFCC9A006C690E /* TransitionManager.swift */; };
 		E6556C351ACFD527006C690E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C341ACFD526006C690E /* UserModel.swift */; };
 		E6556C391AD13215006C690E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C381AD13215006C690E /* UIColorExtension.swift */; };
+		E6CE45841ADDBBA00017DDDA /* AnimalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE45831ADDBBA00017DDDA /* AnimalsModel.swift */; };
+		E6CE45861ADDBD0A0017DDDA /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE45851ADDBD0A0017DDDA /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		E6556C321ACFCC9A006C690E /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		E6556C341ACFD526006C690E /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E6556C381AD13215006C690E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E6CE45831ADDBBA00017DDDA /* AnimalsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsModel.swift; sourceTree = "<group>"; };
+		E6CE45851ADDBD0A0017DDDA /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				E6556C101ACF2711006C690E /* Supporting Files */,
 				E6556C341ACFD526006C690E /* UserModel.swift */,
 				E6556C381AD13215006C690E /* UIColorExtension.swift */,
+				E6CE45831ADDBBA00017DDDA /* AnimalsModel.swift */,
+				E6CE45851ADDBD0A0017DDDA /* Animal.swift */,
 			);
 			path = biggersmaller;
 			sourceTree = "<group>";
@@ -222,8 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6556C331ACFCC9A006C690E /* TransitionManager.swift in Sources */,
+				E6CE45841ADDBBA00017DDDA /* AnimalsModel.swift in Sources */,
 				E6556C151ACF2711006C690E /* ViewController.swift in Sources */,
 				E6556C391AD13215006C690E /* UIColorExtension.swift in Sources */,
+				E6CE45861ADDBD0A0017DDDA /* Animal.swift in Sources */,
 				E6556C351ACFD527006C690E /* UserModel.swift in Sources */,
 				E6556C131ACF2711006C690E /* AppDelegate.swift in Sources */,
 			);
@@ -419,6 +427,7 @@
 				E6556C2E1ACF2711006C690E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6556C2F1ACF2711006C690E /* Build configuration list for PBXNativeTarget "biggersmallerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +436,7 @@
 				E6556C311ACF2711006C690E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
