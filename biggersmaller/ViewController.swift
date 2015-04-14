@@ -12,10 +12,14 @@ class ViewController: UIViewController {
 
     let transitionManager = TransitionManager()
     let user = User.sharedInstance
+    let animals = Animals.sharedInstance
+    
+    @IBOutlet weak var button1: UIButton!
     
     override func viewDidLoad() {
         println("created view")
         super.viewDidLoad()
+        setTitle(animals.getTwoAnimals()[0].name)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -37,11 +41,24 @@ class ViewController: UIViewController {
         // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
         
+//        println(segue.sourceViewController)
+        println("==========")
+        setTitle(animals.getTwoAnimals()[0].name)
+//        println(segue.destinationViewController)
+        
+    }
+    
+    func setTitle(title: String) {
+        if(button1 != nil) {
+            button1.setTitle(title, forState:
+                UIControlState.Normal)
+        }
     }
 
     @IBAction func doButtonTap(sender: AnyObject) {
         user.score++
-        println(user.score)
+//        println(user.score)
+        println(animals.getTwoAnimals()[0].name)
     }
 }
 
