@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
-
+    @IBOutlet weak var button4: UIButton!
+    
     override func viewDidLoad() {
         println("created view")
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     func setTitles(animals: [Animal]) {
-        let buttons = [button1, button2, button3]
+        let buttons = [button1, button2, button3, button4]
         var i = 0
         for button in buttons {
             if(button != nil) {

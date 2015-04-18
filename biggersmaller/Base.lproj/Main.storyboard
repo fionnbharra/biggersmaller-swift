@@ -27,8 +27,8 @@
                                     <segue destination="to0-Uy-T8u" kind="custom" id="Nvp-Tm-shK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vl-tq-E2H">
-                                <rect key="frame" x="16" y="499" width="568" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vl-tq-E2H">
+                                <rect key="frame" x="16" y="484" width="568" height="30"/>
                                 <state key="normal" title="Show">
                                     <color key="titleShadowColor" red="0.20000000300000001" green="0.76078432799999995" blue="0.75294119120000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -40,7 +40,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="0Vl-tq-E2H" secondAttribute="centerX" id="3T6-hF-V4O"/>
+                            <constraint firstItem="0Vl-tq-E2H" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3vP-04-xuM"/>
                             <constraint firstAttribute="centerX" secondItem="Dj0-8M-4sW" secondAttribute="centerX" id="WR2-qo-Qpg"/>
+                            <constraint firstAttribute="centerY" secondItem="0Vl-tq-E2H" secondAttribute="centerY" constant="-214" id="c3e-5B-lbQ"/>
                             <constraint firstItem="Dj0-8M-4sW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="guP-pF-c1U"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dj0-8M-4sW" secondAttribute="bottom" constant="25" id="yQd-vk-QAG"/>
                         </constraints>
@@ -76,22 +79,37 @@
                                     <segue destination="j0Y-t8-MJb" kind="unwind" unwindAction="unwindToViewController:" id="rN9-4a-lCX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pib-Z2-w9h">
+                                <rect key="frame" x="16" y="411" width="568" height="30"/>
+                                <state key="normal" title="Hide">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doButtonTap:" destination="to0-Uy-T8u" eventType="touchUpInside" id="D6w-17-o8h"/>
+                                    <segue destination="j0Y-t8-MJb" kind="unwind" unwindAction="unwindToViewController:" id="axs-Lj-vTt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.76078431369999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="fQp-RC-Y8G" secondAttribute="centerX" id="2O5-iU-ea8"/>
+                            <constraint firstAttribute="centerX" secondItem="Pib-Z2-w9h" secondAttribute="centerX" id="9st-yu-av9"/>
                             <constraint firstItem="2Mb-bM-e8s" firstAttribute="top" secondItem="fQp-RC-Y8G" secondAttribute="bottom" constant="25" id="adR-0U-YDB"/>
                             <constraint firstItem="fQp-RC-Y8G" firstAttribute="trailing" secondItem="EgX-pa-0qw" secondAttribute="trailingMargin" id="f5W-GG-ryi"/>
+                            <constraint firstItem="Pib-Z2-w9h" firstAttribute="leading" secondItem="EgX-pa-0qw" secondAttribute="leadingMargin" id="qK6-yO-NrP"/>
+                            <constraint firstAttribute="centerY" secondItem="Pib-Z2-w9h" secondAttribute="centerY" constant="-126" id="qQU-Ee-mbT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button3" destination="fQp-RC-Y8G" id="dfx-WY-aVR"/>
+                        <outlet property="button4" destination="Pib-Z2-w9h" id="cfU-1u-JIx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muy-EQ-tf6" sceneMemberID="firstResponder"/>
                 <exit id="j0Y-t8-MJb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="197" y="1140"/>
+            <point key="canvasLocation" x="271" y="1506"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
