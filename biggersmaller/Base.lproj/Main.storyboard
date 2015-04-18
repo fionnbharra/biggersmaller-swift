@@ -27,6 +27,16 @@
                                     <segue destination="to0-Uy-T8u" kind="custom" id="Nvp-Tm-shK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vl-tq-E2H">
+                                <rect key="frame" x="16" y="499" width="568" height="30"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.76078432799999995" blue="0.75294119120000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doButtonTap:" destination="BYZ-38-t0r" eventType="touchDown" id="87Q-Cn-DNc"/>
+                                    <segue destination="to0-Uy-T8u" kind="custom" id="zcS-j7-O0y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -37,6 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="button1" destination="Dj0-8M-4sW" id="di3-ot-OfP"/>
+                        <outlet property="button2" destination="0Vl-tq-E2H" id="Nle-3h-9FD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,8 +65,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQp-RC-Y8G">
-                                <rect key="frame" x="16" y="545" width="568" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQp-RC-Y8G">
+                                <rect key="frame" x="16" y="543" width="568" height="30"/>
                                 <state key="normal" title="Hide">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,11 +84,17 @@
                             <constraint firstItem="fQp-RC-Y8G" firstAttribute="trailing" secondItem="EgX-pa-0qw" secondAttribute="trailingMargin" id="f5W-GG-ryi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button3" destination="fQp-RC-Y8G" id="dfx-WY-aVR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muy-EQ-tf6" sceneMemberID="firstResponder"/>
                 <exit id="j0Y-t8-MJb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="283" y="1074"/>
+            <point key="canvasLocation" x="197" y="1140"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zcS-j7-O0y"/>
+    </inferredMetricsTieBreakers>
 </document>

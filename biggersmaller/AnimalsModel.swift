@@ -21,7 +21,7 @@ class Animals {
         return Static.instance!
     }
     
-    var items: [Animal] = [
+    let items: [Animal] = [
         Animal(name: "ant", size: 1),
         Animal(name: "mouse", size: 2),
         Animal(name: "cat", size: 3),
@@ -32,8 +32,12 @@ class Animals {
         Animal(name: "blue whale", size: 8)
     ]
     
-    func getTwoAnimals() -> [Animal]{
-        return [ getRandomAnimal(), getRandomAnimal()]
+    func getRandomAnimals(numberOfAnimals: Int) -> [Animal]{
+        var animals: [Animal] = []
+        for var index = 0; index < numberOfAnimals; ++index {
+            animals.append(getRandomAnimal())
+        }
+        return animals
     }
     
     func getRandomAnimal() -> Animal{
