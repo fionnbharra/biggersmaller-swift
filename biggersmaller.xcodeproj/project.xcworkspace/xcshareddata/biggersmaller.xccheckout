@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>3BFAECA2-CB2A-48C6-BFC8-4232166A4A57</string>
 	<key>IDESourceControlProjectName</key>
-	<string>biggersmaller</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>536180A8FF6745F831B7201892A36A188A13323E</key>
 		<string>https://github.com/fionnbharra/biggersmaller-swift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>biggersmaller.xcodeproj</string>
+	<string>biggersmaller.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>536180A8FF6745F831B7201892A36A188A13323E</key>

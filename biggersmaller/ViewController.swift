@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         println("created view")
         super.viewDidLoad()
         setTitles(animals.getRandomAnimals(4))
+        styleButtons();
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // this gets a reference to the screen that we're about to transition to
-        let toViewController = segue.destinationViewController as UIViewController
+        let toViewController = segue.destinationViewController as! UIViewController
         
         // instead of using the default transition animation, we'll ask
         // the segue to use our custom TransitionManager object to manage the transition animation
@@ -51,8 +52,10 @@ class ViewController: UIViewController {
     func setTitles(animals: [Animal]) {
         let buttons = [button1, button2, button3, button4]
         var i = 0
+        
         for button in buttons {
             if(button != nil) {
+
                 self.setButtonTitle(animals[i].name, button: button)
             }
             i++
@@ -64,6 +67,16 @@ class ViewController: UIViewController {
                 UIControlState.Normal)
     }
 
+    func styleButtons(){
+       let buttons = [button1, button2, button3, button4]
+        for button in buttons {
+            if(button != nil) {
+                button.frame = CGRectMake(100, 100, 100, 50)
+                button.backgroundColor =  UIColor(rgba: "#ff851b")
+            }
+        }
+    }
+    
     @IBAction func doButtonTap(sender: AnyObject) {
         user.score++
     }
