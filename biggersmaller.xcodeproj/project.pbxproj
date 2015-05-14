@@ -16,6 +16,7 @@
 		E6556C331ACFCC9A006C690E /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C321ACFCC9A006C690E /* TransitionManager.swift */; };
 		E6556C351ACFD527006C690E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C341ACFD526006C690E /* UserModel.swift */; };
 		E6556C391AD13215006C690E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6556C381AD13215006C690E /* UIColorExtension.swift */; };
+		E6B9C9071B04A9CE003624F7 /* RoundRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9C9061B04A9CE003624F7 /* RoundRectButton.swift */; };
 		E6CE45841ADDBBA00017DDDA /* AnimalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE45831ADDBBA00017DDDA /* AnimalsModel.swift */; };
 		E6CE45861ADDBD0A0017DDDA /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE45851ADDBD0A0017DDDA /* Animal.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		E6556C321ACFCC9A006C690E /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		E6556C341ACFD526006C690E /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E6556C381AD13215006C690E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E6B9C9061B04A9CE003624F7 /* RoundRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectButton.swift; sourceTree = "<group>"; };
 		E6CE45831ADDBBA00017DDDA /* AnimalsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsModel.swift; sourceTree = "<group>"; };
 		E6CE45851ADDBD0A0017DDDA /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 				E6556C381AD13215006C690E /* UIColorExtension.swift */,
 				E6CE45831ADDBBA00017DDDA /* AnimalsModel.swift */,
 				E6CE45851ADDBD0A0017DDDA /* Animal.swift */,
+				E6B9C9061B04A9CE003624F7 /* RoundRectButton.swift */,
 			);
 			path = biggersmaller;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				E6556C331ACFCC9A006C690E /* TransitionManager.swift in Sources */,
 				E6CE45841ADDBBA00017DDDA /* AnimalsModel.swift in Sources */,
+				E6B9C9071B04A9CE003624F7 /* RoundRectButton.swift in Sources */,
 				E6556C151ACF2711006C690E /* ViewController.swift in Sources */,
 				E6556C391AD13215006C690E /* UIColorExtension.swift in Sources */,
 				E6CE45861ADDBD0A0017DDDA /* Animal.swift in Sources */,

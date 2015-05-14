@@ -10,20 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button1: RoundRectButton!
+    @IBOutlet weak var button2: RoundRectButton!
+    @IBOutlet weak var button3: RoundRectButton!
+    @IBOutlet weak var button4: RoundRectButton!
+    
     let transitionManager = TransitionManager()
     let user = User.sharedInstance
     let animals = Animals.sharedInstance
     
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var button4: UIButton!
+
     
     override func viewDidLoad() {
         println("created view")
         super.viewDidLoad()
         setTitles(animals.getRandomAnimals(4))
-        styleButtons();
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -55,29 +56,15 @@ class ViewController: UIViewController {
         
         for button in buttons {
             if(button != nil) {
-
-                self.setButtonTitle(animals[i].name, button: button)
+                button.setButtonTitle(animals[i].name)
             }
             i++
         }
     }
     
-    func setButtonTitle(title: String, button: UIButton) {
-            button.setTitle(title, forState:
-                UIControlState.Normal)
-    }
-
-    func styleButtons(){
-       let buttons = [button1, button2, button3, button4]
-        for button in buttons {
-            if(button != nil) {
-                button.frame = CGRectMake(100, 100, 100, 50)
-                button.backgroundColor =  UIColor(rgba: "#ff851b")
-            }
-        }
-    }
     
-    @IBAction func doButtonTap(sender: AnyObject) {
+    @IBAction func doButtonTap(sender: RoundRectButton) {
+        println(sender.someString)
         user.score++
     }
 }
