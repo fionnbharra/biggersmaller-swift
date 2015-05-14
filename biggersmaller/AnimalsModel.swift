@@ -33,15 +33,22 @@ class Animals {
     ]
     
     func getRandomAnimals(numberOfAnimals: Int) -> [Animal]{
-        var animals: [Animal] = []
-        for var index = 0; index < numberOfAnimals; ++index {
-            animals.append(getRandomAnimal())
-        }
+        let randomItems = shuffle(items)[0..<numberOfAnimals]
+        let animals : [Animal] = Array(randomItems)
         return animals
     }
     
     func getRandomAnimal() -> Animal{
         let randomIndex = Int(arc4random_uniform(UInt32(items.count)))
         return items[randomIndex]
+    }
+    
+    func shuffle<C: MutableCollectionType where C.Index == Int>(var list: C) -> C {
+        let c = count(list)
+        for i in 0..<(c - 1) {
+            let j = Int(arc4random_uniform(UInt32(c - i))) + i
+            swap(&list[i], &list[j])
+        }
+        return list
     }
 }
