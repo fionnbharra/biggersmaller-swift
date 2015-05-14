@@ -10,21 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var button1: RoundRectButton!
-    @IBOutlet weak var button2: RoundRectButton!
-    @IBOutlet weak var button3: RoundRectButton!
-    @IBOutlet weak var button4: RoundRectButton!
+    @IBOutlet weak var button1: AnimalButton!
+    @IBOutlet weak var button2: AnimalButton!
+    @IBOutlet weak var button3: AnimalButton!
+    @IBOutlet weak var button4: AnimalButton!
     
     let transitionManager = TransitionManager()
     let user = User.sharedInstance
     let animals = Animals.sharedInstance
     
-
-    
     override func viewDidLoad() {
-        println("created view")
         super.viewDidLoad()
-        setTitles(animals.getRandomAnimals(4))
+        updateButtons(animals.getRandomAnimals(4))
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -38,33 +35,31 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         // this gets a reference to the screen that we're about to transition to
         let toViewController = segue.destinationViewController as! UIViewController
         
         // instead of using the default transition animation, we'll ask
         // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
-        println("==========")
-        setTitles(animals.getRandomAnimals(4))
-        
+
+        updateButtons(animals.getRandomAnimals(4))
     }
     
-    func setTitles(animals: [Animal]) {
+    func updateButtons(animals: [Animal]) {
         let buttons = [button1, button2, button3, button4]
         var i = 0
         
         for button in buttons {
             if(button != nil) {
-                button.setButtonTitle(animals[i].name)
+                button.animal = animals[i]
             }
             i++
         }
     }
     
     
-    @IBAction func doButtonTap(sender: RoundRectButton) {
-        println(sender.someString)
+    @IBAction func doButtonTap(sender: AnimalButton) {
+        println(sender.animal.size)
         user.score++
     }
 }
