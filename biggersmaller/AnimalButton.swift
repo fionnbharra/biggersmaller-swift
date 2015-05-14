@@ -20,6 +20,8 @@ public class AnimalButton: UIButton {
         }
     }
     
+    lazy var relatedButton: AnimalButton = self
+    
     var animal: Animal = Animal(name: "", size: 0) {
         didSet
         {

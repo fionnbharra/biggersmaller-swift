@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setButtonRelationships()
         updateButtons(animals.getRandomAnimals(4))
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
         // instead of using the default transition animation, we'll ask
         // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
-
+        setButtonRelationships()
         updateButtons(animals.getRandomAnimals(4))
     }
     
@@ -57,10 +58,29 @@ class ViewController: UIViewController {
         }
     }
     
+    func setButtonRelationships() {
+        if(button1 != nil) { button1.relatedButton = button2 }
+        if(button2 != nil) { button2.relatedButton = button1 }
+        if(button3 != nil) { button3.relatedButton = button4 }
+        if(button4 != nil) { button4.relatedButton = button3 }
+    }
+    
+    func clickedBiggest(clickedButton: AnimalButton) -> Bool {
+        if(clickedButton.animal.size > clickedButton.relatedButton.animal.size){
+            println("Correct!")
+            println(clickedButton.animal.name + " is bigger than " + clickedButton.relatedButton.animal.name)
+            return true
+        } else {
+            println("Incorrect!")
+            println(clickedButton.animal.name + " is not bigger than " + clickedButton.relatedButton.animal.name)
+            return false
+        }
+    }
     
     @IBAction func doButtonTap(sender: AnimalButton) {
-        println(sender.animal.size)
-        user.score++
+        if (clickedBiggest(sender)) {
+            user.score++
+        }
     }
 }
 
