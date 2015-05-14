@@ -2,7 +2,7 @@ import UIKit
 
 /// UIButton subclass that draws a rounded rectangle in its background.
 
-public class RoundRectButton: UIButton {
+public class AnimalButton: UIButton {
     
     // MARK: Public interface
     
@@ -20,12 +20,17 @@ public class RoundRectButton: UIButton {
         }
     }
     
+    var animal: Animal = Animal(name: "", size: 0) {
+        didSet
+        {
+            setButtonTitle(animal.name)
+        }
+    }
+    
     public func setButtonTitle(title: String) {
         self.setTitle(title, forState:
             UIControlState.Normal)
     }
-    
-    public var someString = "finbbar"
     
     // MARK: Overrides
     
